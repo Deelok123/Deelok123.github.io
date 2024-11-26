@@ -49,16 +49,16 @@
             background-attachment: fixed;
         }
 
+        /* 隐藏内容默认样式 */
+        .section {
+            display: none;
+        }
+
         /* 图片样式 */
         .section img {
             max-width: 100%;
             height: auto;
             margin-bottom: 20px;
-        }
-
-        /* 透明度 */
-        .low-opacity {
-            opacity: 0.5;
         }
 
         h1, h3, h4 {
@@ -76,68 +76,82 @@
         <a onclick="navigateTo('register')">粉丝注册</a>
     </div>
 
-    <!-- 动漫简介 -->
-    <div id="intro" class="section" style="background-color: rgba(0, 0, 0, 0.8);">
-        <h3>动漫简介</h3>
-        <h4>
-            《狐妖小红娘》是一部以人妖之恋为主题的玄幻作品，讲述了涂山苏苏与白月初完成任务的故事。<br>
-            其中，月红篇中涂山红红与东方月初的爱情故事令人动容，展现了人妖两族对和平的向往。
-        </h4>
-        <iframe src="http://player.bilibili.com/player.html?isOutside=true&aid=771023177&bvid=BV1kr4y1j7gC&cid=989913024&p=1" scrolling="no" frameborder="0" allowfullscreen style="width: 80%; height: 400px;"></iframe>
-    </div>
+    <!-- 动态加载的内容 -->
+    <div id="content">
+        <!-- 动漫简介 -->
+        <div id="intro" class="section">
+            <h3>动漫简介</h3>
+            <h4>
+                《狐妖小红娘》是一部以人妖之恋为主题的玄幻作品，讲述了涂山苏苏与白月初完成任务的故事。<br>
+                其中，月红篇中涂山红红与东方月初的爱情故事令人动容，展现了人妖两族对和平的向往。
+            </h4>
+            <iframe src="http://player.bilibili.com/player.html?isOutside=true&aid=771023177&bvid=BV1kr4y1j7gC&cid=989913024&p=1" 
+                scrolling="no" frameborder="0" allowfullscreen style="width: 80%; height: 400px;">
+            </iframe>
+        </div>
 
-    <!-- 主要人物角色 -->
-    <div id="characters" class="section" style="background-color: rgba(50, 50, 50, 0.8);">
-        <h3>主要人物角色</h3>
-        <img src="https://gitee.com/amarantos_am/amarantos/raw/master/1.png" alt="涂山雅雅">
-        <h4>涂山雅雅</h4>
-        <img src="https://gitee.com/amarantos_am/amarantos/raw/master/3.png" alt="涂山苏苏">
-        <h4>涂山苏苏</h4>
-        <img src="https://gitee.com/amarantos_am/amarantos/raw/master/4.png" alt="白月初">
-        <h4>白月初</h4>
-        <img src="https://gitee.com/amarantos_am/amarantos/raw/master/5.png" alt="王权富贵">
-        <h4>王权富贵</h4>
-    </div>
+        <!-- 主要人物角色 -->
+        <div id="characters" class="section">
+            <h3>主要人物角色</h3>
+            <img src="https://gitee.com/amarantos_am/amarantos/raw/master/1.png" alt="涂山雅雅">
+            <h4>涂山雅雅</h4>
+            <img src="https://gitee.com/amarantos_am/amarantos/raw/master/3.png" alt="涂山苏苏">
+            <h4>涂山苏苏</h4>
+            <img src="https://gitee.com/amarantos_am/amarantos/raw/master/4.png" alt="白月初">
+            <h4>白月初</h4>
+            <img src="https://gitee.com/amarantos_am/amarantos/raw/master/5.png" alt="王权富贵">
+            <h4>王权富贵</h4>
+        </div>
 
-    <!-- 主要板块篇章 -->
-    <div id="chapters" class="section" style="background-color: rgba(100, 100, 100, 0.8);">
-        <h3>主要板块篇章</h3>
-        <img src="https://gitee.com/amarantos_am/amarantos/raw/master/10.png" alt="下沙篇">
-        <h4>下沙篇</h4>
-        <img src="https://gitee.com/amarantos_am/amarantos/raw/master/11.png" alt="王权篇">
-        <h4>王权篇</h4>
-        <img src="https://gitee.com/amarantos_am/amarantos/raw/master/12.png" alt="月红篇">
-        <h4>月红篇</h4>
-    </div>
+        <!-- 主要板块篇章 -->
+        <div id="chapters" class="section">
+            <h3>主要板块篇章</h3>
+            <img src="https://gitee.com/amarantos_am/amarantos/raw/master/10.png" alt="下沙篇">
+            <h4>下沙篇</h4>
+            <img src="https://gitee.com/amarantos_am/amarantos/raw/master/11.png" alt="王权篇">
+            <h4>王权篇</h4>
+            <img src="https://gitee.com/amarantos_am/amarantos/raw/master/12.png" alt="月红篇">
+            <h4>月红篇</h4>
+        </div>
 
-    <!-- 精彩片段 -->
-    <div id="clips" class="section" style="background-color: rgba(150, 150, 150, 0.8);">
-        <h3>精彩片段</h3>
-        <iframe src="http://player.bilibili.com/player.html?isOutside=true&aid=112875297312408&bvid=BV1fbvCevEPT&cid=500001632620305&p=1" scrolling="no" frameborder="0" allowfullscreen style="width: 80%; height: 400px;"></iframe>
-        <iframe src="http://player.bilibili.com/player.html?isOutside=true&aid=1406021727&bvid=BV1w6421f75s&cid=1612848654&p=1" scrolling="no" frameborder="0" allowfullscreen style="width: 80%; height: 400px;"></iframe>
-    </div>
+        <!-- 精彩片段 -->
+        <div id="clips" class="section">
+            <h3>精彩片段</h3>
+            <iframe src="http://player.bilibili.com/player.html?isOutside=true&aid=112875297312408&bvid=BV1fbvCevEPT&cid=500001632620305&p=1" 
+                scrolling="no" frameborder="0" allowfullscreen style="width: 80%; height: 400px;">
+            </iframe>
+            <iframe src="http://player.bilibili.com/player.html?isOutside=true&aid=1406021727&bvid=BV1w6421f75s&cid=1612848654&p=1" 
+                scrolling="no" frameborder="0" allowfullscreen style="width: 80%; height: 400px;">
+            </iframe>
+        </div>
 
-    <!-- 粉丝注册 -->
-    <div id="register" class="section" style="background-color: rgba(200, 200, 200, 0.8);">
-        <h3>粉丝注册</h3>
-        <img src="https://gitee.com/amarantos_am/amarantos/raw/master/12.png" alt="注册图片">
-        <div>
+        <!-- 粉丝注册 -->
+        <div id="register" class="section">
+            <h3>粉丝注册</h3>
             <label>账号：</label>
-            <input type="text" style="width: 70%;" id="username">
-        </div>
-        <div>
+            <input type="text" style="width: 70%;" id="username"><br><br>
             <label>密码：</label>
-            <input type="password" style="width: 70%;" id="password">
+            <input type="password" style="width: 70%;" id="password"><br><br>
+            <button onclick="alert('注册成功！')">提交</button>
         </div>
-        <button onclick="alert('注册成功！')">提交</button>
     </div>
 
     <script>
+        // 页面加载时显示简介部分
+        document.getElementById('intro').style.display = 'block';
+
         function navigateTo(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-                history.pushState(null, '', sectionId); // 更新 URL
+            // 隐藏所有内容
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // 显示目标内容
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+                history.pushState(null, '', '#' + sectionId); // 更新 URL，但不刷新页面
             }
         }
     </script>
