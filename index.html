@@ -31,6 +31,7 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            cursor: pointer;
         }
 
         .navbar a:hover {
@@ -68,11 +69,11 @@
 <body background="https://gitee.com/amarantos_am/amarantos/raw/master/2.png">
     <h1 style="text-align: center; color: #FF0000;"><marquee>狐妖小红娘</marquee></h1>
     <div class="navbar">
-        <a href="#intro">动漫简介</a>
-        <a href="#characters">主要人物角色</a>
-        <a href="#chapters">主要板块篇章</a>
-        <a href="#clips">精彩片段</a>
-        <a href="#register">粉丝注册</a>
+        <a onclick="navigateTo('intro')">动漫简介</a>
+        <a onclick="navigateTo('characters')">主要人物角色</a>
+        <a onclick="navigateTo('chapters')">主要板块篇章</a>
+        <a onclick="navigateTo('clips')">精彩片段</a>
+        <a onclick="navigateTo('register')">粉丝注册</a>
     </div>
 
     <!-- 动漫简介 -->
@@ -130,5 +131,15 @@
         </div>
         <button onclick="alert('注册成功！')">提交</button>
     </div>
+
+    <script>
+        function navigateTo(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+                history.pushState(null, '', sectionId); // 更新 URL
+            }
+        }
+    </script>
 </body>
 </html>
