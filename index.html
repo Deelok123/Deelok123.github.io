@@ -1,159 +1,95 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>狐妖小红娘</title>
-    <style>
-        /* 页面样式 */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-        }
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			/* 整个页面的样式 */
+			body, html {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+			}
+			/* 导航栏样式 */
+			.navbar {
+				overflow: hidden;
+				background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+				position: fixed;
+				top: 0;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
+		
+			/* 导航栏链接样式 */
+			.navbar a {
+				float: left;
+				display: block;
+				color: #f2f2f2;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+		
+			}
+		
+			/* 鼠标悬停链接样式 */
+			.navbar a:hover {
+				background-color: rgba(255, 255, 255, 0.2);
+				color: white;
+			}
+		
+			/* 内容区域样式 */
+			.section {
+				padding: 60px 0;
+				height: 110vh; /* 使用视口高度作为每个区域的高度 */
+				color: white; /* 设置文字颜色 */
+				text-align: center; /* 文字居中 */
+			  
+			}
+			.section img {
+				max-width: 100%; /* 确保图片不会超出容器宽度 */
+				height: auto; /* 保持图片的原始宽高比 */
+				margin-bottom: 20px; /* 在图片和文字之间添加一些间距 */
+			}
+			 .small-image {
+				width: 520px; /* 设置图片宽度 */
+				height: auto; /* 高度自动保持原始宽高比 */
+			}
+			   .small-high {
+				width: auto; /* 设置图片宽度 */
+				height: 1px; /* 高度自动保持原始宽高比 */
+			}
+			 .low-opacity {
+				opacity: 0.5; /* 透明度为50% */
+			}
+		</style>
+		</head>
+		<body>
+ <head>
+ </head>
+<body>
+<font color=#F00000>
+ <h1><marquee>狐妖小红娘</marquee> </h1>
+ <font color=#000000>
+		<div class="navbar">
+			<a href="1.html">动漫简介</a><br>
+			<a href="2.html">主要人物角色</a><br>
+			<a href="3.html">主要板块篇章</a><br>
+			<a href="4.html">精彩片段</a><br>
+			<a href="5.html">粉丝注册</a><br>
+		</div>
+<h5>狐妖小红娘网页动漫制作人：  互联本二冷焕君28号</h5></font>
+<font color=#FF0000>
+ <h3>动漫简介</h3></font>
+<a href="https://baike.baidu.com/item/狐妖小红娘">狐妖小红娘</a>
+<font color=#000000>
+ <h4> 《狐妖小红娘》是一部以人妖之恋为主题的玄幻作品。在其设定中，妖寿命悠长，人却寿命有限且会转世忘却前尘，而痴情的妖可找狐妖购买服务，让爱人回忆起前世之爱，狐妖红娘应运而生。</h4></font>
+ <h4>作品主要讲述了以红娘为职业的狐妖为前世恋人牵红线的故事，如涂山苏苏与白月初在完成任务时发生的一系列趣事. 其中，月红篇中涂山红红与东方月初历经波折，最终在苦情树下许下转世姻缘，他们的爱情故事令人动容. 这部作品融入了中国神话和传统文化元素，情节跌宕起伏，展现了爱情的美好与坚韧，以及人妖两族的恩怨情仇和对和平的向往。</h4></font>
 
-        /* 导航栏样式 */
-        .navbar {
-            overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.5);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            z-index: 1000;
-        }
-
-        .navbar a {
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .navbar a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: white;
-        }
-
-        /* 内容区域样式 */
-        .section {
-            padding: 80px 20px;
-            height: auto;
-            color: #fff;
-            text-align: center;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-        /* 隐藏内容默认样式 */
-        .section {
-            display: none;
-        }
-
-        /* 图片样式 */
-        .section img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        h1, h3, h4 {
-            margin: 20px 0;
-        }
-    </style>
-</head>
-<body background="https://gitee.com/amarantos_am/amarantos/raw/master/2.png">
-    <h1 style="text-align: center; color: #FF0000;"><marquee>狐妖小红娘</marquee></h1>
-    <div class="navbar">
-        <a onclick="navigateTo('intro')">动漫简介</a>
-        <a onclick="navigateTo('characters')">主要人物角色</a>
-        <a onclick="navigateTo('chapters')">主要板块篇章</a>
-        <a onclick="navigateTo('clips')">精彩片段</a>
-        <a onclick="navigateTo('register')">粉丝注册</a>
-    </div>
-
-    <!-- 动态加载的内容 -->
-    <div id="content">
-        <!-- 动漫简介 -->
-        <div id="intro" class="section">
-            <h3>动漫简介</h3>
-            <h4>
-                《狐妖小红娘》是一部以人妖之恋为主题的玄幻作品，讲述了涂山苏苏与白月初完成任务的故事。<br>
-                其中，月红篇中涂山红红与东方月初的爱情故事令人动容，展现了人妖两族对和平的向往。
-            </h4>
-            <iframe src="http://player.bilibili.com/player.html?isOutside=true&aid=771023177&bvid=BV1kr4y1j7gC&cid=989913024&p=1" 
-                scrolling="no" frameborder="0" allowfullscreen style="width: 80%; height: 400px;">
-            </iframe>
-        </div>
-
-        <!-- 主要人物角色 -->
-        <div id="characters" class="section">
-            <h3>主要人物角色</h3>
-            <img src="https://gitee.com/amarantos_am/amarantos/raw/master/1.png" alt="涂山雅雅">
-            <h4>涂山雅雅</h4>
-            <img src="https://gitee.com/amarantos_am/amarantos/raw/master/3.png" alt="涂山苏苏">
-            <h4>涂山苏苏</h4>
-            <img src="https://gitee.com/amarantos_am/amarantos/raw/master/4.png" alt="白月初">
-            <h4>白月初</h4>
-            <img src="https://gitee.com/amarantos_am/amarantos/raw/master/5.png" alt="王权富贵">
-            <h4>王权富贵</h4>
-        </div>
-
-        <!-- 主要板块篇章 -->
-        <div id="chapters" class="section">
-            <h3>主要板块篇章</h3>
-            <img src="https://gitee.com/amarantos_am/amarantos/raw/master/10.png" alt="下沙篇">
-            <h4>下沙篇</h4>
-            <img src="https://gitee.com/amarantos_am/amarantos/raw/master/11.png" alt="王权篇">
-            <h4>王权篇</h4>
-            <img src="https://gitee.com/amarantos_am/amarantos/raw/master/12.png" alt="月红篇">
-            <h4>月红篇</h4>
-        </div>
-
-        <!-- 精彩片段 -->
-        <div id="clips" class="section">
-            <h3>精彩片段</h3>
-            <iframe src="http://player.bilibili.com/player.html?isOutside=true&aid=112875297312408&bvid=BV1fbvCevEPT&cid=500001632620305&p=1" 
-                scrolling="no" frameborder="0" allowfullscreen style="width: 80%; height: 400px;">
-            </iframe>
-            <iframe src="http://player.bilibili.com/player.html?isOutside=true&aid=1406021727&bvid=BV1w6421f75s&cid=1612848654&p=1" 
-                scrolling="no" frameborder="0" allowfullscreen style="width: 80%; height: 400px;">
-            </iframe>
-        </div>
-
-        <!-- 粉丝注册 -->
-        <div id="register" class="section">
-            <h3>粉丝注册</h3>
-            <label>账号：</label>
-            <input type="text" style="width: 70%;" id="username"><br><br>
-            <label>密码：</label>
-            <input type="password" style="width: 70%;" id="password"><br><br>
-            <button onclick="alert('注册成功！')">提交</button>
-        </div>
-    </div>
-
-    <script>
-        // 页面加载时显示简介部分
-        document.getElementById('intro').style.display = 'block';
-
-        function navigateTo(sectionId) {
-            // 隐藏所有内容
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-
-            // 显示目标内容
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                targetSection.style.display = 'block';
-                history.pushState(null, '', '#' + sectionId); // 更新 URL，但不刷新页面
-            }
-        }
-    </script>
+ <iframe src="http://player.bilibili.com/player.html?isOutside=true&aid=771023177&bvid=BV1kr4y1j7gC&cid=989913024&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+ </iframe>
+ <body background="https://gitee.com/amarantos_am/amarantos/raw/master/2.png">
+<font color=#000000>
 </body>
-</html>
+
+ 
