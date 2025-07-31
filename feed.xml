@@ -3,10 +3,26 @@
     <title>demo</title>
     <link href="https://deelok.ecve.eu.org/feed.xml" rel="self" />
     <link href="https://deelok.ecve.eu.org" />
-    <updated>1970-01-01T08:00:00+08:00</updated>
+    <updated>2025-07-31T16:57:23+08:00</updated>
     <author>
         <name>deelok</name>
     </author>
     <id>https://deelok.ecve.eu.org</id>
 
+    <entry>
+        <title>这是一个新的开始</title>
+        <author>
+            <name>deelok</name>
+        </author>
+        <link href="https://deelok.ecve.eu.org/zhe-shi-yi-ge-xin-de-kai-shi.html"/>
+        <id>https://deelok.ecve.eu.org/zhe-shi-yi-ge-xin-de-kai-shi.html</id>
+
+        <updated>2025-07-31T16:57:23+08:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                <figure class="post__image"><img loading="lazy"  src="https://deelok.ecve.eu.org/media/posts/2/Ping-Mu-Jie-Tu-2025-06-18-231720.png" alt="" width="1664" height="860" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://deelok.ecve.eu.org/media/posts/2/responsive/Ping-Mu-Jie-Tu-2025-06-18-231720-xs.png 640w ,https://deelok.ecve.eu.org/media/posts/2/responsive/Ping-Mu-Jie-Tu-2025-06-18-231720-sm.png 768w ,https://deelok.ecve.eu.org/media/posts/2/responsive/Ping-Mu-Jie-Tu-2025-06-18-231720-md.png 1024w ,https://deelok.ecve.eu.org/media/posts/2/responsive/Ping-Mu-Jie-Tu-2025-06-18-231720-lg.png 1366w ,https://deelok.ecve.eu.org/media/posts/2/responsive/Ping-Mu-Jie-Tu-2025-06-18-231720-xl.png 1600w ,https://deelok.ecve.eu.org/media/posts/2/responsive/Ping-Mu-Jie-Tu-2025-06-18-231720-2xl.png 1920w"></figure>
+            ]]>
+        </content>
+    </entry>
 </feed>
